@@ -2,3 +2,7 @@
 .ipynb_checkpoints
 .idea
 test.py
+bot_config.ini
+
+*.session
+*.session-journal
