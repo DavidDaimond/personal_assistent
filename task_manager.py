@@ -36,7 +36,17 @@ class Task:
         if self and self.active:
             if not self.repetitive:
                 self.active = False
-            self.func(self)
+            self.func()
+
+
+class TelegramTask(Task):
+    def __init__(
+            self,
+            time, func,
+            user_id,
+            **kwargs
+    ):
+        pass
 
 
 class TaskManager:

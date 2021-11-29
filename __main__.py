@@ -1,4 +1,6 @@
 from pyrogram import Client
+from task_manager import TaskManagerThread, TaskManager
+
 
 app = Client(
     "Bot_Nikita",
@@ -7,5 +9,7 @@ app = Client(
     workdir='.',
     parse_mode="markdown"
 )
+
+app.tm_thread = TaskManagerThread(TaskManager())
 
 app.run()
