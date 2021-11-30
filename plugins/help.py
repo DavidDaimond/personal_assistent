@@ -11,7 +11,7 @@ def _start(client, message):
 
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['help']))
-def _start(client, message):
+def _help(client, message):
     client.send_message(chat_id=message.chat.id,
                         text=msg.HELP_MSG,
                         reply_to_message_id=message.message_id

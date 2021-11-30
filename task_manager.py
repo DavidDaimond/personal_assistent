@@ -43,10 +43,12 @@ class TelegramTask(Task):
     def __init__(
             self,
             time, func,
-            user_id,
+            user,
             **kwargs
     ):
-        pass
+        super(TelegramTask, self).__init__(time, func, **kwargs)
+        self.user = user
+
 
 
 class TaskManager:

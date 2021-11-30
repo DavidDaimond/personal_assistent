@@ -1,4 +1,5 @@
 BOT_NAME = "Nikita"
+ADMINS = [649697634, 1343044723]
 
 
 class BotCommands:
