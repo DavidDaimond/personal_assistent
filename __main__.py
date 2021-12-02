@@ -10,6 +10,8 @@ app = Client(
     parse_mode="markdown"
 )
 
-app.tm_thread = TaskManagerThread(TaskManager())
+
+tm = TaskManager()
+app.tm_thread = TaskManagerThread()
 
 app.run()

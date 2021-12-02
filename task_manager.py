@@ -50,7 +50,6 @@ class TelegramTask(Task):
         self.user = user
 
 
-
 class TaskManager:
     def __init__(self, *tasks):
         self.tasks = list(tasks)
