@@ -1,18 +1,12 @@
 from pyrogram import Client, filters
-from config import Messages as msg
+from commands import start_func, help_func
 
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']))
 def _start(client, message):
-    client.send_message(chat_id=message.chat.id,
-                        text=msg.START_MSG.format(message.from_user.mention),
-                        reply_to_message_id=message.message_id
-                        )
+    start_func(client, message)
 
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['help']))
 def _help(client, message):
-    client.send_message(chat_id=message.chat.id,
-                        text=msg.HELP_MSG,
-                        reply_to_message_id=message.message_id
-                        )
+    help_func(client, message)

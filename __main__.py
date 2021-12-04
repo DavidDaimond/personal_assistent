@@ -1,6 +1,10 @@
 from pyrogram import Client
 from task_manager import TaskManagerThread, TaskManager
 
+import argparse
+
+parser = argparse.ArgumentParser(description='Start an assistent work with some params')
+parser.add_argument('-tmresume', action='store', type=str)
 
 app = Client(
     "Bot_Nikita",
@@ -12,6 +16,6 @@ app = Client(
 
 
 tm = TaskManager()
-app.tm_thread = TaskManagerThread()
+app.tm_thread = TaskManagerThread(tm)
 
 app.run()
